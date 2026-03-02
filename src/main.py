@@ -1,6 +1,6 @@
 class CubeSolver:
   def __init__():
-    phases={'blue','green','orange','red','yellow','white'}
+    faces={'blue','green','orange','red','yellow','white'}
     mutually_oppsite_side_phases={'blue':'green','orange':'red','yellow':'white'}
     colors={'blue','green','orange','red','yellow','white'}
     vertex=
@@ -29,6 +29,8 @@ class CubeSolver:
       "gw":["green","white"],
       "gy":["green","yellow"]
     }
+    states=
+    move_paths=
   def solver():
       batch=27
       block=20
