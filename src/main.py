@@ -61,3 +61,7 @@ class CubeSolver:
       state=solver()
       while state!=solution:
         moves()
+
+if __name__=="__main__":
+  cs=CubeSolver()
+  
