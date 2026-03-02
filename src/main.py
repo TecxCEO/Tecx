@@ -39,7 +39,19 @@ class CubeSolver:
       "ogy":"ogy",
       "ogw":"ogw",
       "oby":"oby",
-      "obw":"obw"
+      "obw":"obw",
+      "rb":"",
+      "rg":"",
+      "rw":"",
+      "ry":"",
+      "ob":"",
+      "og":"",
+      "ow":"",
+      "oy":"",
+      "by":"",
+      "bw":"",
+      "gw":"",
+      "gy":""
     }
     state_given={
       "rgy":"",
@@ -49,7 +61,19 @@ class CubeSolver:
       "ogy":"",
       "ogw":"",
       "oby":"",
-      "obw":""
+      "obw":"",
+      "rb":"",
+      "rg":"",
+      "rw":"",
+      "ry":"",
+      "ob":"",
+      "og":"",
+      "ow":"",
+      "oy":"",
+      "by":"",
+      "bw":"",
+      "gw":"",
+      "gy":""
     }
   def solver():
       batch=27
