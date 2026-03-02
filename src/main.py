@@ -54,26 +54,26 @@ class CubeSolver:
       "gy":"gy"
     }
     state_given={
-      "rgy":"",
-      "rgw":"",
-      "rby":"",
-      "rbw":"",
-      "ogy":"",
-      "ogw":"",
-      "oby":"",
-      "obw":"",
-      "rb":"",
-      "rg":"",
-      "rw":"",
-      "ry":"",
-      "ob":"",
-      "og":"",
-      "ow":"",
-      "oy":"",
-      "by":"",
-      "bw":"",
-      "gw":"",
-      "gy":""
+      "rgy":"ogw",
+      "rgw":"ybo",
+      "rby":"ryg",
+      "rbw":"bwr",
+      "ogy":"yrb",
+      "ogw":"oyg",
+      "oby":"owb",
+      "obw":"wrg",
+      "rb":"gy",
+      "rg":"rw",
+      "rw":"yr",
+      "ry":"by",
+      "ob":"gw",
+      "og":"bw",
+      "ow":"oy",
+      "oy":"ow",
+      "by":"go",
+      "bw":"rb",
+      "gw":"ob",
+      "gy":"gr"
     }
   def solver():
       batch=27
