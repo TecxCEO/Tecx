@@ -1,5 +1,7 @@
 class CubeSolver:
   def __init__():
+    phases={'blue','green','orange','red','yellow','white'}
+    mutually_oppsite_side_phases={'blue':'green','orange':'red','yellow':'white'}
     colors={'blue','green','orange','red','yellow','white'}
     vertex=
     {
