@@ -29,4 +29,7 @@ class CubeSolver:
       "gw":["green","white"],
       "gy":["green","yellow"]
     }
-    
+    def solver():
+      batch=27
+      block=20
+      
