@@ -41,6 +41,16 @@ class CubeSolver:
       "oby":"oby",
       "obw":"obw"
     }
+    state_given={
+      "rgy":"",
+      "rgw":"",
+      "rby":"",
+      "rbw":"",
+      "ogy":"",
+      "ogw":"",
+      "oby":"",
+      "obw":""
+    }
   def solver():
       batch=27
       block=20
