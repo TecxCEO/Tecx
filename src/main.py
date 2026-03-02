@@ -16,17 +16,17 @@ class CubeSolver:
     }
     edges=
     {
-      "rb":["",""],
+      "rb":["red","blue"],
       "rg":["red","green"],
-      "rw":["",""],
-      "ry":["",""],
-      "ob":["",""],
-      "og":["",""],
-      "ow":["",""],
-      "oy":["",""],
-      "by":["",""],
-      "bw":["",""],
-      "gw":["",""],
-      "gy":["",""]
+      "rw":["red","white"],
+      "ry":["red","yellow"],
+      "ob":["orange","blue"],
+      "og":["orange","green"],
+      "ow":["orange","white"],
+      "oy":["orange","yellow"],
+      "by":["blue","yellow"],
+      "bw":["blue","white"],
+      "gw":["green","white"],
+      "gy":["green","yellow"]
     }
     
