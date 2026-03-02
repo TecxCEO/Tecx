@@ -31,6 +31,16 @@ class CubeSolver:
     }
     states=
     move_paths=
+    solution={
+      "rgy":"rgy",
+      "rgw":"rgw",
+      "rby":"rby",
+      "rbw":"rbw",
+      "ogy":"ogy",
+      "ogw":"ogw",
+      "oby":"oby",
+      "obw":"obw"
+    }
   def solver():
       batch=27
       block=20
