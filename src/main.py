@@ -29,13 +29,13 @@ class CubeSolver:
       "gw":["green","white"],
       "gy":["green","yellow"]
     }
-    def solver():
+  def solver():
       batch=27
       block=20
       epoches=20
       for epoch in range(epoches):
         
-    def moves():
+  def moves():
       state=solver()
       while state!=solution:
         moves()
