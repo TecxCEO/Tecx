@@ -32,6 +32,9 @@ class CubeSolver:
     def solver():
       batch=27
       block=20
+      epoches=20
+      for epoch in range(epoches):
+        
     def moves():
       state=solver()
       while state!=solution:
