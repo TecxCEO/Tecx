@@ -6,13 +6,13 @@ class CubeSolver:
     vertex=
     {
       "rgy":["red","green","yellow"],
-      "g":["","",""],
-      "y":["","",""],
-      "o":["","",""],
-      "b":["","",""],
-      "w":["","",""],
-      "":["","",""],
-      "":["","",""]
+      "rgw":["red","green","white"],
+      "rby":["red","blue","yellow"],
+      "rbw":["red","blue","white"],
+      "ogy":["orange","green","yellow"],
+      "ogw":["orange","green","white"],
+      "oby":["orange","blue","yellow"],
+      "obw":["orange","blue","white"]
     }
     edges=
     {
