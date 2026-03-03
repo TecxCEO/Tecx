@@ -122,8 +122,8 @@ class CubeSolver:
                 # mb[f"{name}"].append(state[state_element].strip()[se])
                 st_e+=state[state_element].strip()[se]
                 # st_e.append(state[state_element].strip()[se])
-                print(f"={mb}")
       mb={name:st_e}
+      print(f"={mb}")
     mbc=mb
     if self.mosf[f]!=c:
       mb[f"{f}{s}{c}"]=mbc[f"{f}{s}{self.mosf[c]}"]
