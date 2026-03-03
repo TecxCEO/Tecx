@@ -22,7 +22,7 @@ class CubeSolver:
       "gw":"gw",
       "gy":"gy"
     }
-  def __init__():
+  def __init__(self):
     output_file="./puzzle_move_and_states.json"
     faces={'b':'blue','g':'green','o':'orange','r':'red','y':'yellow','w':'white'}
     mutually_oppsite_side_faces={'blue':'green','orange':'red','yellow':'white'}
@@ -54,7 +54,7 @@ class CubeSolver:
       "gy":["green","yellow"]
     }
     # states={}
-    '''solution={
+    self.solution={
       "rgy":"rgy",
       "rgw":"rgw",
       "rby":"rby",
@@ -75,7 +75,7 @@ class CubeSolver:
       "bw":"bw",
       "gw":"gw",
       "gy":"gy"
-    }'''
+    }
     state_given={
       "rgy":"ogw",
       "rgw":"ybo",
@@ -158,7 +158,7 @@ class CubeSolver:
       # epoches=20
       # for epoch in range(epoches):
         
-  def moves(state, move_list=move_paths,move_history=""):
+  def moves(self,state, move_list=move_paths,move_history=""):
     moves_to=move_list
     cur_state=state
     i=0
@@ -166,7 +166,7 @@ class CubeSolver:
     puzzle_solve= False
     last_move=""
     move_path_history=move_history
-    while cur_state!=solution & i<len(moves_to):
+    while cur_state!=self.solution & i<len(moves_to):
       states[i] = mover(moves_to[i],cur_state)
       move_path_history.append(moves_to[i])
       # Prepare the JSONL entry
