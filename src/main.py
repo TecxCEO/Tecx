@@ -220,6 +220,6 @@ if __name__=="__main__":
       "gw":"ob",
       "gy":"gr"
     }
-  cs=CubeSolver
+  cs=CubeSolver()
   result=cs.moves(state_given)
   print(result)
