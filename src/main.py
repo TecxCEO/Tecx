@@ -118,7 +118,7 @@ class CubeSolver:
               print(f"={se}")
               if state_element.strip()[se]==name.strip()[n]:
                 print(f"={state_element.strip()[se]}")
-                mb[name].append(state[state_element].strip()[se])
+                mb[f"{name}"].append(state[state_element].strip()[se])
                 print(f"={mb}")
     mbc=mb
     if mosf[f]!=c:
