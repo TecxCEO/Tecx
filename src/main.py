@@ -4,7 +4,7 @@ class CubeSolver:
     output_file="./puzzle_move_and_states.json"
     faces={'b':'blue','g':'green','o':'orange','r':'red','y':'yellow','w':'white'}
     mutually_oppsite_side_faces={'blue':'green','orange':'red','yellow':'white'}
-    mosf={'b':'g','g':'b','o':'r','r':'o','y':'w','w':'y'}
+    this.mosf={'b':'g','g':'b','o':'r','r':'o','y':'w','w':'y'}
     colors={'blue','green','orange','red','yellow','white'}
     # self.move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
     vertex={
@@ -87,9 +87,9 @@ class CubeSolver:
     s=moving_step.strip()[1]
     c=moving_step.strip()[2]
     s1=f
-    s2=mosf[f]
+    s2=self.mosf[f]
     s3=c
-    s4=mosf[c]
+    s4=self.mosf[c]
     # mosf[f] mosf[s]
     moving_block={}
     mb={}
