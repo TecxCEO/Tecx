@@ -91,7 +91,7 @@ class CubeSolver:
     s3=c
     s4=self.mosf[c]
     # mosf[f] mosf[s]
-    moving_block={}
+    moving_block=[]
     mb={}
     moving_block.append(f"{f}{s}{c}",f"{f}{s}{mosf[c]}",f"{mosf[f]}{s}{c}",f"{mosf[f]}{s}{mosf[c]}",f"{f}{s}",f"{s}{c}",f"{mosf[f]}{s}",f"{s}{mosf[c]}")
     # if mosf[f]!=c:
