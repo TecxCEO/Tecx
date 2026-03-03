@@ -1,3 +1,5 @@
+import json
+
 class CubeSolver:
   move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
   def __init__(self):
