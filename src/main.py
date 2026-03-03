@@ -104,15 +104,26 @@ class CubeSolver:
           for se in len(state_element):
             if state_element.strip()[se]==name.strip()[n]:
               mb[name].append{state[state_element].strip()[se]}
-    # f=moving_step.strip()[0]
-    # s=moving_step.strip()[1]
-    # c=moving_step.strip()[2]
-    
+    mbc=mb
     if mosf[f]!=c:
-    
+      mb[f"{f}{s}{c}"]=mbc[f"{f}{s}{mosf[c]}"]
+      mb[f"{s}{c}"]=mbc[f"{f}{s}"]
+      mb[f"{mosf[f]}{s}{c}"]=mbc[f"{f}{s}{c}"]
+      mb[f"{mosf[f]}{s}"]=mbc[f"{s}{c}"]
+      mb[f"{mosf[f]}{s}{mosf[c]}"]=mbc[f"{mosf[f]}{s}{c}"]
+      mb[f"{s}{mosf[c]}"]=mbc[f"{mosf[f]}{s}"]
+      mb[f"{f}{s}{mosf[c]}"]=mbc[f"{mosf[f]}{s}{mosf[c]}"]
+      mb[f"{f}{s}"]=mbc[f"{s}{mosf[c]}"]
     elif mosf[f]==c:
       # moving_block={f s c,f s mosf[c],mosf[f] s c, mosf[f] s mosf[c],f s, s c , mosf[f] s, s mosf[c]}
-    
+      mb[f"{f}{s}{c}"]=mbc[f"{f}{s}{mosf[c]}"]
+      mb[f"{s}{c}"]=mbc[f"{f}{s}"]
+      mb[f"{mosf[f]}{s}{c}"]=mbc[f"{f}{s}{c}"]
+      mb[f"{mosf[f]}{s}"]=mbc[f"{s}{c}"]
+      mb[f"{mosf[f]}{s}{mosf[c]}"]=mbc[f"{mosf[f]}{s}{c}"]
+      mb[f"{s}{mosf[c]}"]=mbc[f"{mosf[f]}{s}"]
+      mb[f"{f}{s}{mosf[c]}"]=mbc[f"{mosf[f]}{s}{mosf[c]}"]
+      mb[f"{f}{s}"]=mbc[f"{s}{mosf[c]}"]
     for name in moving_block:
       if any(sorted(name) == sorted(state_element) for state_element in state):
         for se in len(state_element):
