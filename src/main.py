@@ -93,7 +93,15 @@ class CubeSolver:
     # mosf[f] mosf[s]
     moving_block=[]
     mb={}
-    moving_block.append(f"{f}{s}{c}",f"{f}{s}{self.mosf[c]}",f"{self.mosf[f]}{s}{c}",f"{self.mosf[f]}{s}{self.mosf[c]}",f"{f}{s}",f"{s}{c}",f"{self.mosf[f]}{s}",f"{s}{self.mosf[c]}")
+    # moving_block.append(f"{f}{s}{c}",f"{f}{s}{self.mosf[c]}",f"{self.mosf[f]}{s}{c}",f"{self.mosf[f]}{s}{self.mosf[c]}",f"{f}{s}",f"{s}{c}",f"{self.mosf[f]}{s}",f"{s}{self.mosf[c]}")
+    moving_block.append(f"{f}{s}{c}")
+    moving_block.append(f"{f}{s}{self.mosf[c]}")
+    moving_block.append(f"{self.mosf[f]}{s}{c}")
+    moving_block.append(f"{self.mosf[f]}{s}{self.mosf[c]}")
+    moving_block.append(f"{f}{s}")
+    moving_block.append((f"{s}{c}")
+    moving_block.append(f"{self.mosf[f]}{s}")
+    moving_block.append(f"{s}{self.mosf[c]}")
     # if self.mosf[f]!=c:
     # moving_block={}
     # moving_block.append{f"{f}{s}{c}",f"{f}{s}{mosf[c]}",f"{mosf[f]}{s}{c}",f"{mosf[f]}{s}{mosf[c]}",f"{f}{s}",f"{s}{c}",f"{mosf[f]}{s}",f"{s}{mosf[c]}"}
