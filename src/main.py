@@ -170,10 +170,10 @@ class CubeSolver:
         if last_move.strip()[:2]!=to_move.strip()[:2]:
           next_moves_list.append(to_move)
         states[i],move_path_history,puzzle_solve=moves(states[i],next_moves_list,move_path_history)
-         if states[i]==solution:
-          puzzle_solve=True
-          return states[i],move_path_history,puzzle_solve
-        i=i+1
+      if states[i]==solution:
+        puzzle_solve=True
+        return states[i],move_path_history,puzzle_solve
+      i=i+1
 if __name__=="__main__":
   cs=CubeSolver()
   result=cs.moves(state_given)
