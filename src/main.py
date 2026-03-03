@@ -158,7 +158,7 @@ class CubeSolver:
       # epoches=20
       # for epoch in range(epoches):
         
-  def moves(self,state, move_list=self.move_paths,move_history=""):
+  def moves(self,state, move_list=move_paths,move_history=""):
     moves_to=move_list
     cur_state=state
     i=0
