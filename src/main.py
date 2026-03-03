@@ -176,6 +176,6 @@ class CubeSolver:
         return states[i],move_path_history,puzzle_solve
       i=i+1
 if __name__=="__main__":
-  cs=CubeSolver()
+  cs=CubeSolver
   result=cs.moves(state_given)
   print(result)
