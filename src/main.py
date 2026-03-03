@@ -116,14 +116,14 @@ class CubeSolver:
       mb[f"{f}{s}"]=mbc[f"{s}{mosf[c]}"]
     elif mosf[f]==c:
       # moving_block={f s c,f s mosf[c],mosf[f] s c, mosf[f] s mosf[c],f s, s c , mosf[f] s, s mosf[c]}
-      mb[f"{f}{s}{c}"]=mbc[f"{f}{s}{mosf[c]}"]
-      mb[f"{s}{c}"]=mbc[f"{f}{s}"]
-      mb[f"{mosf[f]}{s}{c}"]=mbc[f"{f}{s}{c}"]
-      mb[f"{mosf[f]}{s}"]=mbc[f"{s}{c}"]
-      mb[f"{mosf[f]}{s}{mosf[c]}"]=mbc[f"{mosf[f]}{s}{c}"]
-      mb[f"{s}{mosf[c]}"]=mbc[f"{mosf[f]}{s}"]
-      mb[f"{f}{s}{mosf[c]}"]=mbc[f"{mosf[f]}{s}{mosf[c]}"]
-      mb[f"{f}{s}"]=mbc[f"{s}{mosf[c]}"]
+      mb[f"{mosf[f]}{s}{c}"]=mbc[f"{f}{s}{mosf[c]}"]
+      mb[f"{mosf[f]}{s}"]=mbc[f"{f}{s}"]
+      mb[f"{mosf[f]}{s}{mosf[c]}"]=mbc[f"{f}{s}{c}"]
+      mb[f"{s}{mosf[c]}"]=mbc[f"{s}{c}"]
+      mb[f"{[f]}{s}{mosf[c]}"]=mbc[f"{mosf[f]}{s}{c}"]
+      mb[f"{f}{s}"]=mbc[f"{mosf[f]}{s}"]
+      mb[f"{f}{s}{c}"]=mbc[f"{mosf[f]}{s}{mosf[c]}"]
+      mb[f"{s}{c}"]=mbc[f"{s}{mosf[c]}"]
     for name in moving_block:
       if any(sorted(name) == sorted(state_element) for state_element in state):
         for se in len(state_element):
