@@ -195,7 +195,7 @@ class CubeSolver:
         # if(last_move.strip()[:2]!=to_move.strip()[:2]):
         if last_move.strip()[:2]!=to_move.strip()[:2]:
           next_moves_list.append(to_move)
-        states[i],move_path_history,puzzle_solve=moves(states[i],next_moves_list,move_path_history)
+        states[i],move_path_history,puzzle_solve=self.moves(states[i],next_moves_list,move_path_history)
       if states[i]==solution:
         puzzle_solve=True
         return states[i],move_path_history,puzzle_solve
