@@ -120,11 +120,12 @@ class CubeSolver:
               if state_element.strip()[se]==name.strip()[n]:
                 print(f"={state_element.strip()[se]}")
                 # mb[f"{name}"].append(state[state_element].strip()[se])
-                st_e.append(state[state_element].strip()[se])
+                st_e+=state[state_element].strip()[se]
+                # st_e.append(state[state_element].strip()[se])
                 print(f"={mb}")
       mb={name:st_e}
     mbc=mb
-    if mosf[f]!=c:
+    if self.mosf[f]!=c:
       mb[f"{f}{s}{c}"]=mbc[f"{f}{s}{self.mosf[c]}"]
       mb[f"{s}{c}"]=mbc[f"{f}{s}"]
       mb[f"{self.mosf[f]}{s}{c}"]=mbc[f"{f}{s}{c}"]
@@ -133,7 +134,7 @@ class CubeSolver:
       mb[f"{s}{self.mosf[c]}"]=mbc[f"{self.mosf[f]}{s}"]
       mb[f"{f}{s}{self.mosf[c]}"]=mbc[f"{self.mosf[f]}{s}{self.mosf[c]}"]
       mb[f"{f}{s}"]=mbc[f"{s}{self.mosf[c]}"]
-    elif mosf[f]==c:
+    elif self.mosf[f]==c:
       # moving_block={f s c,f s mosf[c],mosf[f] s c, mosf[f] s mosf[c],f s, s c , mosf[f] s, s mosf[c]}
       mb[f"{self.mosf[f]}{s}{c}"]=mbc[f"{f}{s}{self.mosf[c]}"]
       mb[f"{self.mosf[f]}{s}"]=mbc[f"{f}{s}"]
