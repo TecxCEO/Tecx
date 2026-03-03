@@ -1,5 +1,5 @@
 class CubeSolver:
-  move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
+  # move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
   solution={
       "rgy":"rgy",
       "rgw":"rgw",
@@ -28,7 +28,7 @@ class CubeSolver:
     mutually_oppsite_side_faces={'blue':'green','orange':'red','yellow':'white'}
     mosf={'b':'g','g':'b','o':'r','r':'o','y':'w','w':'y'}
     colors={'blue','green','orange','red','yellow','white'}
-    #self.move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
+    self.move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
     vertex={
       "rgy":["red","green","yellow"],
       "rgw":["red","green","white"],
@@ -104,7 +104,7 @@ class CubeSolver:
       if(last_move.strip()[:2]!=move_paths[m].strip()[:2]):
         moves[m]=move_paths[m]
     return moves
-  def mover(moving_step,state):
+  def mover(self,moving_step,state):
     f=moving_step.strip()[0]
     s=moving_step.strip()[1]
     c=moving_step.strip()[2]
@@ -158,7 +158,7 @@ class CubeSolver:
       # epoches=20
       # for epoch in range(epoches):
         
-  def moves(self,state, move_list=move_paths,move_history=""):
+  def moves(self,state, move_list=self.move_paths,move_history=""):
     moves_to=move_list
     cur_state=state
     i=0
