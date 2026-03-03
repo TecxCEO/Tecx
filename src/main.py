@@ -144,7 +144,7 @@ class CubeSolver:
     for state_element in state:
       st_e=""
       for name in moving_block:
-        if any(sorted(name) == sorted(state_element):
+        if sorted(name) == sorted(state_element):
                for se in range(len(state_element)):
                  for n in range(len(name)):
                    if state_element.strip()[se]==name.strip()[n]:
