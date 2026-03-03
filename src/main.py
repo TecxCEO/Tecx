@@ -1,11 +1,11 @@
 class CubeSolver:
-  def __init__():
+  def __init__(self):
     output_file="./puzzle_move_and_states.json"
     faces={'b':'blue','g':'green','o':'orange','r':'red','y':'yellow','w':'white'}
     mutually_oppsite_side_faces={'blue':'green','orange':'red','yellow':'white'}
     mosf={'b':'g','g':'b','o':'r','r':'o','y':'w','w':'y'}
     colors={'blue','green','orange','red','yellow','white'}
-    move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
+    self.move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
     vertex={
       "rgy":["red","green","yellow"],
       "rgw":["red","green","white"],
@@ -135,7 +135,7 @@ class CubeSolver:
       # epoches=20
       # for epoch in range(epoches):
         
-  def moves(state, move_list=move_paths,move_history=""):
+  def moves(state, move_list=self.move_paths,move_history=""):
     moves_to=move_list
     cur_state=state
     i=0
