@@ -5,8 +5,7 @@ class CubeSolver:
     mutually_oppsite_side_faces={'blue':'green','orange':'red','yellow':'white'}
     mosf={'b':'g','g':'b','o':'r','r':'o','y':'w','w':'y'}
     colors={'blue','green','orange','red','yellow','white'}
-    vertex=
-    {
+    vertex={
       "rgy":["red","green","yellow"],
       "rgw":["red","green","white"],
       "rby":["red","blue","yellow"],
@@ -16,8 +15,7 @@ class CubeSolver:
       "oby":["orange","blue","yellow"],
       "obw":["orange","blue","white"]
     }
-    edges=
-    {
+    edges={
       "rb":["red","blue"],
       "rg":["red","green"],
       "rw":["red","white"],
