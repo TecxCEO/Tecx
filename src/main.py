@@ -161,7 +161,7 @@ class CubeSolver:
       # epoches=20
       # for epoch in range(epoches):
         
-  def moves(self,state, move_list=move_paths,move_history=""):
+  def moves(self, state, move_list=move_paths, move_history=""):
     moves_to=list(move_list)
     cur_state=state
     i=0
@@ -195,7 +195,7 @@ class CubeSolver:
         # if(last_move.strip()[:2]!=to_move.strip()[:2]):
         if last_move.strip()[:2]!=to_move.strip()[:2]:
           next_moves_list.append(to_move)
-        states[i], move_path_history, puzzle_solve=self.moves(states[i],next_moves_list,move_path_history)
+        states[i], move_path_history, puzzle_solve = self.moves(states[i], next_moves_list, move_path_history)
       if states[i]==solution:
         puzzle_solve=True
         return states[i], move_path_history, puzzle_solve
