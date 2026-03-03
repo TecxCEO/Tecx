@@ -1,7 +1,7 @@
 class CubeSolver:
   move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
   def __init__(self):
-    output_file="./puzzle_move_and_states.json"
+    self.output_file="./puzzle_move_and_states.json"
     faces={'b':'blue','g':'green','o':'orange','r':'red','y':'yellow','w':'white'}
     mutually_oppsite_side_faces={'blue':'green','orange':'red','yellow':'white'}
     self.mosf={'b':'g','g':'b','o':'r','r':'o','y':'w','w':'y'}
@@ -182,7 +182,7 @@ class CubeSolver:
         }
         }
       # Append to the JSONL file
-      with open(output_file, 'a', encoding='utf-8') as f:
+      with open(self.output_file, 'a', encoding='utf-8') as f:
             f.write(json.dumps(data_entry) + '\n')
       print(f"Successfully Saved")
       last_move=moves_to[i]
