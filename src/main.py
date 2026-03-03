@@ -137,6 +137,9 @@ class CubeSolver:
             f.write(json.dumps(data_entry) + '\n')
       print(f"Successfully scraped: {}")
       last_move=moves_to[i]
+      if states[i]==solution:
+          fuzzle_solve=True
+          return states[i],last_move,fuzzle_solve
       next_moves_list={}
       # next_moves_list=next_moves(last_move)
       for to_move in moves_to:
@@ -145,9 +148,6 @@ class CubeSolver:
         if last_move.strip()[:2]!=to_move.strip()[:2]:
           next_moves_list.append(to_move)
         moves(states[i],next_moves_list,move_path_history)
-        if states[i]==solution:
-          fuzzle_solve=True
-          return cur_state,last_move,fuzzle_solve
         i=i+1
 if __name__=="__main__":
   cs=CubeSolver()
