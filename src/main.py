@@ -54,7 +54,7 @@ class CubeSolver:
       "gy":["green","yellow"]
     }
     # states={}
-    solution={
+    '''solution={
       "rgy":"rgy",
       "rgw":"rgw",
       "rby":"rby",
@@ -75,7 +75,7 @@ class CubeSolver:
       "bw":"bw",
       "gw":"gw",
       "gy":"gy"
-    }
+    }'''
     state_given={
       "rgy":"ogw",
       "rgw":"ybo",
