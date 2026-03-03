@@ -114,15 +114,18 @@ class CubeSolver:
       cur_state=state
       i=0
       # states = {}
-      while state!=solution:
-        states[i] = web_url
+      while state!=solution & i<len(moves_to):
+        states[i] = mover(moves_to[i],cur_state)
         last_move=moves_to[i]
         next_move={}
+        # next_moves_list=next_moves(last_move)
         for to_move in moves_to:
-          if last_move != to_move:
-            next_move.append(to_move)
+          # if last_move != to_move:
+          # if(last_move.strip()[:2]!=to_move.strip()[:2]):
+          if last_move.strip()[:2]!=to_move.strip()[:2]:
+            next_moves_list.append(to_move)
+        moves(states[i],next_moves_list)
         i=i+1
-        moves(cur_state,next_move)
 if __name__=="__main__":
   cs=CubeSolver()
   cs.moves
