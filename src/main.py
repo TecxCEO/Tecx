@@ -119,10 +119,8 @@ class CubeSolver:
               if state_element.strip()[se]==name.strip()[n]:
                 print(f"={state_element.strip()[se]}")
                 st_e+=state[state_element].strip()[se]
-                # st_e.append(state[state_element].strip()[se]) # mb[name]+=state[state_element].strip()[se]
-                # mb[f"{name}"].append(state[state_element].strip()[se])
       mb.update({name:st_e})
-      print(f"={mb}")
+      print(f"mb={mb}")
     mbc=mb
     if self.mosf[f]!=c:
       mb[f"{f}{s}{c}"]=mbc[f"{f}{s}{self.mosf[c]}"]
@@ -143,12 +141,17 @@ class CubeSolver:
       mb[f"{f}{s}"]=mbc[f"{self.mosf[f]}{s}"]
       mb[f"{f}{s}{c}"]=mbc[f"{self.mosf[f]}{s}{self.mosf[c]}"]
       mb[f"{s}{c}"]=mbc[f"{s}{self.mosf[c]}"]
-    for name in moving_block:
-      if any(sorted(name) == sorted(state_element) for state_element in state):
-        for se in range(len(state_element)):
-          for n in range(len(name)):
-            if state_element.strip()[se]==name.strip()[n]:
-              state[state_element].append(mb[name].strip()[n])
+    for state_element in state):
+      st_e=""
+      for name in moving_block:
+        if any(sorted(name) == sorted(state_element):
+               for se in range(len(state_element)):
+                 for n in range(len(name)):
+                   if state_element.strip()[se]==name.strip()[n]:
+                     # state[state_element].append(mb[name].strip()[n])
+                     st_e+=mb[name].strip()[n]
+      state.update({state_element:st_e})
+      print(f"state={state}")
     return state
   # def solver():
       # batch=27
