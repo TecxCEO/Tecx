@@ -147,8 +147,8 @@ class CubeSolver:
       mb[f"{s}{c}"]=mbc[f"{s}{self.mosf[c]}"]
     for name in moving_block:
       if any(sorted(name) == sorted(state_element) for state_element in state):
-        for se in len(state_element):
-          for n in len(name):
+        for se in range(len(state_element)):
+          for n in range(len(name)):
             if state_element.strip()[se]==name.strip()[n]:
               state[state_element].append(mb[name].strip()[n])
     return state
