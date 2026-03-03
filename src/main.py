@@ -160,7 +160,7 @@ class CubeSolver:
       # Append to the JSONL file
       with open(output_file, 'a', encoding='utf-8') as f:
             f.write(json.dumps(data_entry) + '\n')
-      print(f"Successfully scraped: {}")
+      print(f"Successfully Saved")
       last_move=moves_to[i]
       next_moves_list={}
       # next_moves_list=next_moves(last_move)
