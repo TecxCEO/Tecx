@@ -1,6 +1,6 @@
 class CubeSolver:
   def __init__():
-    output_file="./fuzzle_move_and_states.json"
+    output_file="./puzzle_move_and_states.json"
     faces={'b':'blue','g':'green','o':'orange','r':'red','y':'yellow','w':'white'}
     mutually_oppsite_side_faces={'blue':'green','orange':'red','yellow':'white'}
     mosf={'b':'g','g':'b','o':'r','r':'o','y':'w','w':'y'}
@@ -31,7 +31,7 @@ class CubeSolver:
       "gw":["green","white"],
       "gy":["green","yellow"]
     }
-    states={}
+    # states={}
     move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
     solution={
       "rgy":"rgy",
@@ -99,18 +99,16 @@ class CubeSolver:
       # moving_block.append{f"{f}{s}{c}",f"{f}{s}{mosf[c]}",f"{mosf[f]}{s}{c}",f"{mosf[f]}{s}{mosf[c]}",f"{f}{s}",f"{s}{c}",f"{mosf[f]}{s}",f"{s}{mosf[c]}"}
       for name in moving_block:
         if any(sorted(name) == sorted (state_element) for state_element in state):
-    
     elif mosf[f]==c:
       # moving_block={f s c,f s mosf[c],mosf[f] s c, mosf[f] s mosf[c],f s, s c , mosf[f] s, s mosf[c]}
-    
     return state
-  def solver():
-      batch=27
-      block=20
-      epoches=20
-      for epoch in range(epoches):
+  # def solver():
+      # batch=27
+      # block=20
+      # epoches=20
+      # for epoch in range(epoches):
         
-  def moves(state, move_list=move_paths,move_history):
+  def moves(state, move_list=move_paths,move_history=""):
     moves_to=move_list
     cur_state=state
     i=0
@@ -151,4 +149,4 @@ class CubeSolver:
         i=i+1
 if __name__=="__main__":
   cs=CubeSolver()
-  cs.moves
+  cs.moves(state_given)
