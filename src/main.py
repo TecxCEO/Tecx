@@ -117,7 +117,7 @@ class CubeSolver:
       while state!=solution & i<len(moves_to):
         states[i] = mover(moves_to[i],cur_state)
         last_move=moves_to[i]
-        next_move={}
+        next_moves_list={}
         # next_moves_list=next_moves(last_move)
         for to_move in moves_to:
           # if last_move != to_move:
