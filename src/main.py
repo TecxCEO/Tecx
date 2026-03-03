@@ -176,6 +176,28 @@ class CubeSolver:
         return states[i],move_path_history,puzzle_solve
       i=i+1
 if __name__=="__main__":
+  state_given={
+      "rgy":"ogw",
+      "rgw":"ybo",
+      "rby":"ryg",
+      "rbw":"bwr",
+      "ogy":"yrb",
+      "ogw":"oyg",
+      "oby":"owb",
+      "obw":"wrg",
+      "rb":"gy",
+      "rg":"rw",
+      "rw":"yr",
+      "ry":"by",
+      "ob":"gw",
+      "og":"bw",
+      "ow":"oy",
+      "oy":"ow",
+      "by":"go",
+      "bw":"rb",
+      "gw":"ob",
+      "gy":"gr"
+    }
   cs=CubeSolver
   result=cs.moves(state_given)
   print(result)
