@@ -127,7 +127,7 @@ class CubeSolver:
         for se in len(state_element):
           for n in len(name):
             if state_element.strip()[se]==name.strip()[n]:
-              state[state_element].append{mb[name].strip()[n]}
+              state[state_element].append(mb[name].strip()[n])
     return state
   # def solver():
       # batch=27
