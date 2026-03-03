@@ -117,7 +117,7 @@ class CubeSolver:
             for se in range(len(state_element)):
               print(f"={se}")
               if state_element.strip()[se]==name.strip()[n]:
-                print(f"={}")
+                print(f"={state_element.strip()[se]}")
                 mb[name].append(state[state_element].strip()[se])
                 print(f"={mb}")
     mbc=mb
