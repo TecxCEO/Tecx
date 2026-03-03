@@ -1,6 +1,6 @@
 class CubeSolver:
   def __init__():
-    faces={'blue','green','orange','red','yellow','white'}
+    faces={'b':'blue','g':'green','o':'orange','r':'red','y':'yellow','w':'white'}
     mutually_oppsite_side_faces={'blue':'green','orange':'red','yellow':'white'}
     mosf={'b':'g','g':'b','o':'r','r':'o','y':'w','w':'y'}
     colors={'blue','green','orange','red','yellow','white'}
