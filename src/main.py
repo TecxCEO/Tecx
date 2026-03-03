@@ -124,12 +124,12 @@ class CubeSolver:
       # Prepare the JSONL entry
       data_entry = {
         "given state":"",
-        "state":states[i],
+        "current state":states[i],
         "move": moves_to[i],
         "moved_steps_list":move_path_history,
         "metadata": {
           "source": "Fuzzle Solver",
-          "length": len()
+          "length": len(move_path_history)
         }
         }
       # Append to the JSONL file
@@ -145,10 +145,10 @@ class CubeSolver:
         if last_move.strip()[:2]!=to_move.strip()[:2]:
           next_moves_list.append(to_move)
         moves(states[i],next_moves_list,move_path_history)
+        if states[i]==solution:
+          fuzzle_solve=True
+          return cur_state,last_move,fuzzle_solve
         i=i+1
-      if cur_state==solution:
-        fuzzle_solve=True
-        return cur_state,last_move,fuzzle_solve
 if __name__=="__main__":
   cs=CubeSolver()
   cs.moves
