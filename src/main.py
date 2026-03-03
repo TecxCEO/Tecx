@@ -113,10 +113,10 @@ class CubeSolver:
     cur_state=state
     i=0
     states = {}
-    fuzzle_solve= False
+    puzzle_solve= False
     last_move=""
     move_path_history=move_history
-    while state!=solution & i<len(moves_to):
+    while cur_state!=solution & i<len(moves_to):
       states[i] = mover(moves_to[i],cur_state)
       move_path_history.append(moves_to[i])
       # Prepare the JSONL entry
@@ -142,11 +142,12 @@ class CubeSolver:
         # if(last_move.strip()[:2]!=to_move.strip()[:2]):
         if last_move.strip()[:2]!=to_move.strip()[:2]:
           next_moves_list.append(to_move)
-        a,b,c=moves(states[i],next_moves_list,move_path_history)
+        states[i],move_path_history,puzzle_solve=moves(states[i],next_moves_list,move_path_history)
          if states[i]==solution:
-          fuzzle_solve=True
-          return states[i],last_move,fuzzle_solve
+          puzzle_solve=True
+          return states[i],move_path_history,puzzle_solve
         i=i+1
 if __name__=="__main__":
   cs=CubeSolver()
   result=cs.moves(state_given)
+  print(result)
