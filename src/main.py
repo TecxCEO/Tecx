@@ -5,6 +5,7 @@ class CubeSolver:
     mutually_oppsite_side_faces={'blue':'green','orange':'red','yellow':'white'}
     mosf={'b':'g','g':'b','o':'r','r':'o','y':'w','w':'y'}
     colors={'blue','green','orange','red','yellow','white'}
+    move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
     vertex={
       "rgy":["red","green","yellow"],
       "rgw":["red","green","white"],
@@ -30,7 +31,6 @@ class CubeSolver:
       "gy":["green","yellow"]
     }
     # states={}
-    move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
     solution={
       "rgy":"rgy",
       "rgw":"rgw",
