@@ -1,5 +1,6 @@
 class CubeSolver:
   def __init__():
+    output_file="./fuzzle_move_and_states.json"
     faces={'b':'blue','g':'green','o':'orange','r':'red','y':'yellow','w':'white'}
     mutually_oppsite_side_faces={'blue':'green','orange':'red','yellow':'white'}
     mosf={'b':'g','g':'b','o':'r','r':'o','y':'w','w':'y'}
@@ -110,22 +111,40 @@ class CubeSolver:
       for epoch in range(epoches):
         
   def moves(state, move_list=move_paths):
-      moves_to=move_list
-      cur_state=state
-      i=0
-      # states = {}
-      while state!=solution & i<len(moves_to):
-        states[i] = mover(moves_to[i],cur_state)
-        last_move=moves_to[i]
-        next_moves_list={}
-        # next_moves_list=next_moves(last_move)
-        for to_move in moves_to:
-          # if last_move != to_move:
-          # if(last_move.strip()[:2]!=to_move.strip()[:2]):
-          if last_move.strip()[:2]!=to_move.strip()[:2]:
-            next_moves_list.append(to_move)
+    moves_to=move_list
+    cur_state=state
+    i=0
+    states = {}
+    fuzzle_solve= False
+    last_move=""
+    while state!=solution & i<len(moves_to):
+      states[i] = mover(moves_to[i],cur_state)
+      # Prepare the JSONL entry
+      data_entry = {
+        "state":states[i],
+        "move": moves_to[i],
+        "metadata": {
+          "source": "Fuzzle Solver",
+          "length": len()
+        }
+        }
+      # Append to the JSONL file
+      with open(output_file, 'a', encoding='utf-8') as f:
+            f.write(json.dumps(data_entry) + '\n')
+      print(f"Successfully scraped: {}")
+      last_move=moves_to[i]
+      next_moves_list={}
+      # next_moves_list=next_moves(last_move)
+      for to_move in moves_to:
+        # if last_move != to_move:
+        # if(last_move.strip()[:2]!=to_move.strip()[:2]):
+        if last_move.strip()[:2]!=to_move.strip()[:2]:
+          next_moves_list.append(to_move)
         moves(states[i],next_moves_list)
         i=i+1
+      if cur_state==solution:
+        fuzzle_solve=True
+        return cur_state,last_move,fuzzle_solve
 if __name__=="__main__":
   cs=CubeSolver()
   cs.moves
