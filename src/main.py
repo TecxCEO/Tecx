@@ -188,7 +188,7 @@ class CubeSolver:
             f.write(json.dumps(data_entry) + '\n')
       print(f"Successfully Saved")
       last_move=moves_to[i]
-      next_moves_list={}
+      next_moves_list=[]
       # next_moves_list=next_moves(last_move)
       for to_move in moves_to:
         # if last_move != to_move:
@@ -199,7 +199,7 @@ class CubeSolver:
       if states[i]==solution:
         puzzle_solve=True
         return states[i], move_path_history, puzzle_solve
-      return self.moves(states[i], next_moves_list, move_path_history)
+      return self.moves(states[i], next_moves_list, move_path_history) ##
       i=i+1
 if __name__=="__main__":
   state_given={
