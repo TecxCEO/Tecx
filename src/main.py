@@ -99,7 +99,7 @@ class CubeSolver:
     moving_block.append(f"{self.mosf[f]}{s}{c}")
     moving_block.append(f"{self.mosf[f]}{s}{self.mosf[c]}")
     moving_block.append(f"{f}{s}")
-    moving_block.append((f"{s}{c}")
+    moving_block.append(f"{s}{c}")
     moving_block.append(f"{self.mosf[f]}{s}")
     moving_block.append(f"{s}{self.mosf[c]}")
     # if self.mosf[f]!=c:
