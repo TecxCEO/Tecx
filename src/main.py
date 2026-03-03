@@ -1,5 +1,27 @@
 class CubeSolver:
   move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
+  solution={
+      "rgy":"rgy",
+      "rgw":"rgw",
+      "rby":"rby",
+      "rbw":"rbw",
+      "ogy":"ogy",
+      "ogw":"ogw",
+      "oby":"oby",
+      "obw":"obw",
+      "rb":"rb",
+      "rg":"rg",
+      "rw":"rw",
+      "ry":"ry",
+      "ob":"ob",
+      "og":"og",
+      "ow":"ow",
+      "oy":"oy",
+      "by":"by",
+      "bw":"bw",
+      "gw":"gw",
+      "gy":"gy"
+    }
   def __init__():
     output_file="./puzzle_move_and_states.json"
     faces={'b':'blue','g':'green','o':'orange','r':'red','y':'yellow','w':'white'}
