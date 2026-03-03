@@ -93,8 +93,8 @@ class CubeSolver:
     # mosf[f] mosf[s]
     moving_block=[]
     mb={}
-    moving_block.append(f"{f}{s}{c}",f"{f}{s}{mosf[c]}",f"{mosf[f]}{s}{c}",f"{mosf[f]}{s}{mosf[c]}",f"{f}{s}",f"{s}{c}",f"{mosf[f]}{s}",f"{s}{mosf[c]}")
-    # if mosf[f]!=c:
+    moving_block.append(f"{f}{s}{c}",f"{f}{s}{self.mosf[c]}",f"{self.mosf[f]}{s}{c}",f"{self.mosf[f]}{s}{self.mosf[c]}",f"{f}{s}",f"{s}{c}",f"{self.mosf[f]}{s}",f"{s}{self.mosf[c]}")
+    # if self.mosf[f]!=c:
     # moving_block={}
     # moving_block.append{f"{f}{s}{c}",f"{f}{s}{mosf[c]}",f"{mosf[f]}{s}{c}",f"{mosf[f]}{s}{mosf[c]}",f"{f}{s}",f"{s}{c}",f"{mosf[f]}{s}",f"{s}{mosf[c]}"}
     for name in moving_block:
@@ -105,24 +105,24 @@ class CubeSolver:
               mb[name].append(state[state_element].strip()[se])
     mbc=mb
     if mosf[f]!=c:
-      mb[f"{f}{s}{c}"]=mbc[f"{f}{s}{mosf[c]}"]
+      mb[f"{f}{s}{c}"]=mbc[f"{f}{s}{self.mosf[c]}"]
       mb[f"{s}{c}"]=mbc[f"{f}{s}"]
-      mb[f"{mosf[f]}{s}{c}"]=mbc[f"{f}{s}{c}"]
-      mb[f"{mosf[f]}{s}"]=mbc[f"{s}{c}"]
-      mb[f"{mosf[f]}{s}{mosf[c]}"]=mbc[f"{mosf[f]}{s}{c}"]
-      mb[f"{s}{mosf[c]}"]=mbc[f"{mosf[f]}{s}"]
-      mb[f"{f}{s}{mosf[c]}"]=mbc[f"{mosf[f]}{s}{mosf[c]}"]
-      mb[f"{f}{s}"]=mbc[f"{s}{mosf[c]}"]
+      mb[f"{self.mosf[f]}{s}{c}"]=mbc[f"{f}{s}{c}"]
+      mb[f"{self.mosf[f]}{s}"]=mbc[f"{s}{c}"]
+      mb[f"{self.mosf[f]}{s}{self.mosf[c]}"]=mbc[f"{self.mosf[f]}{s}{c}"]
+      mb[f"{s}{self.mosf[c]}"]=mbc[f"{self.mosf[f]}{s}"]
+      mb[f"{f}{s}{self.mosf[c]}"]=mbc[f"{self.mosf[f]}{s}{self.mosf[c]}"]
+      mb[f"{f}{s}"]=mbc[f"{s}{self.mosf[c]}"]
     elif mosf[f]==c:
       # moving_block={f s c,f s mosf[c],mosf[f] s c, mosf[f] s mosf[c],f s, s c , mosf[f] s, s mosf[c]}
-      mb[f"{mosf[f]}{s}{c}"]=mbc[f"{f}{s}{mosf[c]}"]
-      mb[f"{mosf[f]}{s}"]=mbc[f"{f}{s}"]
-      mb[f"{mosf[f]}{s}{mosf[c]}"]=mbc[f"{f}{s}{c}"]
-      mb[f"{s}{mosf[c]}"]=mbc[f"{s}{c}"]
-      mb[f"{[f]}{s}{mosf[c]}"]=mbc[f"{mosf[f]}{s}{c}"]
-      mb[f"{f}{s}"]=mbc[f"{mosf[f]}{s}"]
-      mb[f"{f}{s}{c}"]=mbc[f"{mosf[f]}{s}{mosf[c]}"]
-      mb[f"{s}{c}"]=mbc[f"{s}{mosf[c]}"]
+      mb[f"{self.mosf[f]}{s}{c}"]=mbc[f"{f}{s}{self.mosf[c]}"]
+      mb[f"{self.mosf[f]}{s}"]=mbc[f"{f}{s}"]
+      mb[f"{self.mosf[f]}{s}{self.mosf[c]}"]=mbc[f"{f}{s}{c}"]
+      mb[f"{s}{self.mosf[c]}"]=mbc[f"{s}{c}"]
+      mb[f"{[f]}{s}{self.mosf[c]}"]=mbc[f"{self.mosf[f]}{s}{c}"]
+      mb[f"{f}{s}"]=mbc[f"{self.mosf[f]}{s}"]
+      mb[f"{f}{s}{c}"]=mbc[f"{self.mosf[f]}{s}{self.mosf[c]}"]
+      mb[f"{s}{c}"]=mbc[f"{s}{self.mosf[c]}"]
     for name in moving_block:
       if any(sorted(name) == sorted(state_element) for state_element in state):
         for se in len(state_element):
