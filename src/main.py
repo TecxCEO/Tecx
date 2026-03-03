@@ -109,15 +109,20 @@ class CubeSolver:
       epoches=20
       for epoch in range(epoches):
         
-  def moves(state):
-      moves=move_paths
+  def moves(state, move_list=move_paths):
+      moves_to=move_list
       cur_state=state
       i=0
       # states = {}
       while state!=solution:
         states[i] = web_url
-        moves(cur_state)
+        last_move=moves_to[i]
+        next_move={}
+        for to_move in moves_to:
+          if last_move != to_move:
+            next_move.append(to_move)
         i=i+1
+        moves(cur_state,next_move)
 if __name__=="__main__":
   cs=CubeSolver()
   cs.moves
