@@ -1,7 +1,8 @@
 class CubeSolver:
   def __init__():
     faces={'blue','green','orange','red','yellow','white'}
-    mutually_oppsite_side_phases={'blue':'green','orange':'red','yellow':'white'}
+    mutually_oppsite_side_faces={'blue':'green','orange':'red','yellow':'white'}
+    mosf={'b':'g','g':'b','o':'r','r':'o','y':'w','w':'y'}
     colors={'blue','green','orange','red','yellow','white'}
     vertex=
     {
@@ -29,8 +30,8 @@ class CubeSolver:
       "gw":["green","white"],
       "gy":["green","yellow"]
     }
-    states=
-    move_paths=
+    states={}
+    move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
     solution={
       "rgy":"rgy",
       "rgw":"rgw",
@@ -75,17 +76,48 @@ class CubeSolver:
       "gw":"ob",
       "gy":"gr"
     }
+  def next_moves(last_move):
+    moves={}
+    for m in range(18):
+      if(last_move.strip()[:2]!=move_paths[m].strip()[:2]):
+        moves[m]=move_paths[m]
+    return moves
+  def mover(moving_step,state):
+    f=moving_step.strip()[0]
+    s=moving_step.strip()[1]
+    c=moving_step.strip()[2]
+    s1=f
+    s2=mosf[f]
+    s3=c
+    s4=mosf[c]
+    # mosf[f] mosf[s]
+    moving_block={}
+    moving_block.append{f"{f}{s}{c}",f"{f}{s}{mosf[c]}",f"{mosf[f]}{s}{c}",f"{mosf[f]}{s}{mosf[c]}",f"{f}{s}",f"{s}{c}",f"{mosf[f]}{s}",f"{s}{mosf[c]}"}
+    if mosf[f]!=c:
+      # moving_block={}
+      # moving_block.append{f"{f}{s}{c}",f"{f}{s}{mosf[c]}",f"{mosf[f]}{s}{c}",f"{mosf[f]}{s}{mosf[c]}",f"{f}{s}",f"{s}{c}",f"{mosf[f]}{s}",f"{s}{mosf[c]}"}
+      for name in moving_block:
+        if any(sorted(name) == sorted (state_element) for state_element in state):
+    
+    elif mosf[f]==c:
+      # moving_block={f s c,f s mosf[c],mosf[f] s c, mosf[f] s mosf[c],f s, s c , mosf[f] s, s mosf[c]}
+    
+    return state
   def solver():
       batch=27
       block=20
       epoches=20
       for epoch in range(epoches):
         
-  def moves():
-      state=solver()
+  def moves(state):
+      moves=move_paths
+      cur_state=state
+      i=0
+      # states = {}
       while state!=solution:
-        moves()
-
+        states[i] = web_url
+        moves(cur_state)
+        i=i+1
 if __name__=="__main__":
   cs=CubeSolver()
-  
+  cs.moves
