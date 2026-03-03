@@ -145,7 +145,7 @@ class CubeSolver:
     last_move=""
     move_path_history=move_history
     while cur_state!=self.solution and i<len(moves_to):
-      states[i] = mover(moves_to[i],cur_state)
+      states[i] = self.mover(moves_to[i],cur_state)
       move_path_history.append(moves_to[i])
       # Prepare the JSONL entry
       data_entry = {
