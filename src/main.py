@@ -108,6 +108,7 @@ class CubeSolver:
     for name in moving_block:
       print(f"={name}")
       # if any(sorted(name) == sorted(state_element) for state_element in state):
+      st_e=""
       for state_element in state:
         print(f"={state_element}")
         if sorted(name) == sorted(state_element):
@@ -118,8 +119,10 @@ class CubeSolver:
               print(f"={se}")
               if state_element.strip()[se]==name.strip()[n]:
                 print(f"={state_element.strip()[se]}")
-                mb[f"{name}"].append(state[state_element].strip()[se])
+                # mb[f"{name}"].append(state[state_element].strip()[se])
+                st_e.append(state[state_element].strip()[se])
                 print(f"={mb}")
+      mb{name:st_e}
     mbc=mb
     if mosf[f]!=c:
       mb[f"{f}{s}{c}"]=mbc[f"{f}{s}{self.mosf[c]}"]
