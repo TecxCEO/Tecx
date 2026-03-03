@@ -108,7 +108,7 @@ class CubeSolver:
     for name in moving_block:
       print(f"={name}")
       # if any(sorted(name) == sorted(state_element) for state_element in state):
-      st_e=""
+      st_e=[]
       for state_element in state:
         print(f"={state_element}")
         if sorted(name) == sorted(state_element):
