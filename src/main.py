@@ -141,7 +141,7 @@ class CubeSolver:
       mb[f"{f}{s}"]=mbc[f"{self.mosf[f]}{s}"]
       mb[f"{f}{s}{c}"]=mbc[f"{self.mosf[f]}{s}{self.mosf[c]}"]
       mb[f"{s}{c}"]=mbc[f"{s}{self.mosf[c]}"]
-    for state_element in state):
+    for state_element in state:
       st_e=""
       for name in moving_block:
         if any(sorted(name) == sorted(state_element):
