@@ -106,13 +106,20 @@ class CubeSolver:
     # moving_block={}
     # moving_block.append{f"{f}{s}{c}",f"{f}{s}{mosf[c]}",f"{mosf[f]}{s}{c}",f"{mosf[f]}{s}{mosf[c]}",f"{f}{s}",f"{s}{c}",f"{mosf[f]}{s}",f"{s}{mosf[c]}"}
     for name in moving_block:
+      print(f"={name}")
       # if any(sorted(name) == sorted(state_element) for state_element in state):
       for state_element in state:
+        print(f"={state_element}")
         if sorted(name) == sorted(state_element):
+          print(f"={name}")
           for n in range(len(name)):
+            print(f"={n}")
             for se in range(len(state_element)):
+              print(f"={se}")
               if state_element.strip()[se]==name.strip()[n]:
+                print(f"={}")
                 mb[name].append(state[state_element].strip()[se])
+                print(f"={mb}")
     mbc=mb
     if mosf[f]!=c:
       mb[f"{f}{s}{c}"]=mbc[f"{f}{s}{self.mosf[c]}"]
