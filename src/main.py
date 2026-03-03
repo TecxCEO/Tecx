@@ -110,19 +110,23 @@ class CubeSolver:
       epoches=20
       for epoch in range(epoches):
         
-  def moves(state, move_list=move_paths):
+  def moves(state, move_list=move_paths,move_history):
     moves_to=move_list
     cur_state=state
     i=0
     states = {}
     fuzzle_solve= False
     last_move=""
+    move_path_history=move_history
     while state!=solution & i<len(moves_to):
       states[i] = mover(moves_to[i],cur_state)
+      move_path_history.append(moves_to[i])
       # Prepare the JSONL entry
       data_entry = {
+        "given state":"",
         "state":states[i],
         "move": moves_to[i],
+        "moved_steps_list":move_path_history,
         "metadata": {
           "source": "Fuzzle Solver",
           "length": len()
@@ -140,7 +144,7 @@ class CubeSolver:
         # if(last_move.strip()[:2]!=to_move.strip()[:2]):
         if last_move.strip()[:2]!=to_move.strip()[:2]:
           next_moves_list.append(to_move)
-        moves(states[i],next_moves_list)
+        moves(states[i],next_moves_list,move_path_history)
         i=i+1
       if cur_state==solution:
         fuzzle_solve=True
