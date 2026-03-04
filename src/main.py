@@ -120,7 +120,7 @@ class CubeSolver:
               print(f"={se}")
               if state_element.strip()[se]==name.strip()[n]:
                 print(f"={state_element.strip()[se]}")
-                print("se={se}")
+                print(f"se={se}")
                 st_e+=state[state_element].strip()[se]
       mb.update({name:st_e})
       print(f"mb={mb}")
