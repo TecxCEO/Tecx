@@ -118,7 +118,7 @@ class CubeSolver:
                 st_e+=state[state_element].strip()[se]
       if st_e!="":
         mb.update({name:st_e})
-    print(f"elements of mb={mb}")
+    print(f"Elements of moving block={mb}")
     mbc=mb
     if self.mosf[f]!=c:
       mb[f"{f}{s}{c}"]=mbc[f"{f}{s}{self.mosf[c]}"]
@@ -138,9 +138,10 @@ class CubeSolver:
       mb[f"{f}{s}"]=mbc[f"{self.mosf[f]}{s}"]
       mb[f"{f}{s}{c}"]=mbc[f"{self.mosf[f]}{s}{self.mosf[c]}"]
       mb[f"{s}{c}"]=mbc[f"{s}{self.mosf[c]}"]
-    for state_element in state:
+    print(f"After move the elements of moving block={mb}")
+    for name in moving_block:
       mb_e=""
-      for name in moving_block:
+      for state_element in state:
         if sorted(name) == sorted(state_element):
           print(f"Moving block {name} element has value = {mb[name]} /n this value will be save to Given State {state_element} element after this {moving_step} move")
           for se in range(len(state_element)):
