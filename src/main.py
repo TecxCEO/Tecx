@@ -158,46 +158,42 @@ class CubeSolver:
       # #
       a= mb[f"{self.mosf[f]}{s}"] #
       print(f"After mb {self.mosf[f]}{s}={a}") #
-      a= #
-      print(f"Before ={a}") #
-      ac= #
-      print(f"Before ={ac}") #
+      a=mb[f"{self.mosf[f]}{s}{self.mosf[c]}"] #
+      print(f"Before mb {self.mosf[f]}{s}{self.mosf[c]}  ={a}") #
+      ac= mbc[f"{self.mosf[f]}{s}{c}"] #
+      print(f"Before mbc {self.mosf[f]}{s}{c}    ={ac}") #
       # #
       mb[f"{self.mosf[f]}{s}{self.mosf[c]}"]=mbc[f"{self.mosf[f]}{s}{c}"]
       # #
-      a= #
-      print(f"After ={a}") #
-      a= #
-      print(f"Before ={a}") #
-      ac= #
-      print(f"Before ={ac}") #
+      a= mb[f"{self.mosf[f]}{s}{self.mosf[c]}"] #
+      print(f"After mb {self.mosf[f]}{s}{self.mosf[c]} ={a}") #
+      a= mb[f"{s}{self.mosf[c]}"] #
+      print(f"Before mb {s}{self.mosf[c]} = {a}") #
+      ac= mbc[f"{self.mosf[f]}{s}"] #
+      print(f"Before mbc {self.mosf[f]}{s}   ={ac}") #
       # #
       mb[f"{s}{self.mosf[c]}"]=mbc[f"{self.mosf[f]}{s}"]
       # #
-      a= #
-      print(f"After ={a}") #
-      a= #
-      print(f"Before ={a}") #
-      ac= #
-      print(f"Before ={ac}") #
+      a= mb[f"{s}{self.mosf[c]}"]  #
+      print(f"After mb {s}{self.mosf[c]}  ={a}") #
+      a= mb[f"{f}{s}{self.mosf[c]}"] #
+      print(f"Before  mb {f}{s}{self.mosf[c]} =  {a}") #
+      ac= mbc[f"{self.mosf[f]}{s}{self.mosf[c]}"] #
+      print(f"Before mbc {self.mosf[f]}{s}{self.mosf[c]} ={ac}") #
       # #
       mb[f"{f}{s}{self.mosf[c]}"]=mbc[f"{self.mosf[f]}{s}{self.mosf[c]}"]
       # #
-      a= #
-      print(f"After ={a}") #
-      a= #
-      print(f"Before ={a}") #
-      ac= #
-      print(f"Before ={ac}") #
+      a= mb[f"{f}{s}{self.mosf[c]}"]   #
+      print(f"After  mb {f}{s}{self.mosf[c]}   ={a}") #
+      a=  mb[f"{f}{s}"] #
+      print(f"Before  mb {f}{s}   ={a}") #
+      ac= mbc[f"{s}{self.mosf[c]}"] #
+      print(f"Before  mbc {s}{self.mosf[c]}   ={ac}") #
       # #
       mb[f"{f}{s}"]=mbc[f"{s}{self.mosf[c]}"]
       # #
-      a= #
-      print(f"After ={a}") #
-      a= #
-      print(f"Before ={a}") #
-      ac= #
-      print(f"Before ={ac}") #
+      a=mb[f"{f}{s}"] #
+      print(f"After mb {f}{s}   ={a}") #
       # #
     elif self.mosf[f]==c:
       # #
