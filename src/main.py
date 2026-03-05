@@ -142,10 +142,10 @@ class CubeSolver:
       for name in moving_block:
         if sorted(name) == sorted(state_element):
           print(f"Given State {state_element} element has value= {state[state_element]} /n Moving block {name} element has value = {moving_block[name]} after this {moving_step} move")
-               for se in range(len(state_element)):
-                 for n in range(len(name)):
-                   if state_element.strip()[se]==name.strip()[n]:
-                     mb_e+=mb[name].strip()[n]
+          for se in range(len(state_element)):
+            for n in range(len(name)):
+              if state_element.strip()[se]==name.strip()[n]:
+                mb_e+=mb[name].strip()[n]
       if mb_e!="":
         state.update({state_element:mb_e})
     print(f"Current state of puzzle after this {moving_step} move state={state}")
