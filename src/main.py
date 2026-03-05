@@ -122,6 +122,8 @@ class CubeSolver:
     mbc=mb
     if self.mosf[f]!=c:
       mb[f"{f}{s}{c}"]=mbc[f"{f}{s}{self.mosf[c]}"]
+      print(f"mb{f}{s}{c}={mb[f"{f}{s}{c}"]} and mbc{f}{s}{self.mosf[c]}={mbc[f"{f}{s}{self.mosf[c]}"]}") # #
+      print(f"mb[{f}{s}{c}]={mb[f"{f}{s}{c}"]} and mbc[{f}{s}{self.mosf[c]}]={mbc[f"{f}{s}{self.mosf[c]}"]}") # #
       mb[f"{s}{c}"]=mbc[f"{f}{s}"]
       mb[f"{self.mosf[f]}{s}{c}"]=mbc[f"{f}{s}{c}"]
       mb[f"{self.mosf[f]}{s}"]=mbc[f"{s}{c}"]
