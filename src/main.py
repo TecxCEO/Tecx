@@ -106,7 +106,7 @@ class CubeSolver:
         # print(f"={state_element}")
         if sorted(name) == sorted(state_element):
           # print(f"Given element = {state_element},/n Moving block element = {name}")
-          print(f"Given State {state_element} element has value= {state[state_element]} /n This valule will be saved to Moving block {name} element has value = {mb[name]} after this {moving_step} move ")
+          print(f"Given State {state_element} element has value= {state[state_element]} /n This valule will be saved to Moving block {name} element after this {moving_step} move ")
           for n in range(len(name)):
             # print(f"={n}")
             for se in range(len(state_element)):
