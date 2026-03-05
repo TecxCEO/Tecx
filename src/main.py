@@ -121,27 +121,163 @@ class CubeSolver:
     print(f"Elements of moving block={mb}")
     mbc=mb
     if self.mosf[f]!=c:
+      # #
+      a=mb[f"{f}{s}{c}"] #
+      print(f"Before mb{f}{s}{c}={a}") # #
+      ac=mbc[f"{f}{s}{self.mosf[c]}"] #
+      print(f"Before mbc{f}{s}{self.mosf[c]}={ac}") # #
+      # #
       mb[f"{f}{s}{c}"]=mbc[f"{f}{s}{self.mosf[c]}"]
-      print(f"mb{f}{s}{c}={mb[f"{f}{s}{c}"]} and mbc{f}{s}{self.mosf[c]}={mbc[f"{f}{s}{self.mosf[c]}"]}") # #
-      print(f"mb[{f}{s}{c}]={mb[f"{f}{s}{c}"]} and mbc[{f}{s}{self.mosf[c]}]={mbc[f"{f}{s}{self.mosf[c]}"]}") # #
+      # #
+      a=mb[f"{f}{s}{c}"] #
+      print(f"After mb{f}{s}{c}={a}") #
+      a= #
+      print(f"Before ={a}") #
+      ac= #
+      print(f"Before ={ac}") #
+      # #
       mb[f"{s}{c}"]=mbc[f"{f}{s}"]
+      # #
+      a= #
+      print(f"After ={a}") #
+      a= #
+      print(f"Before ={a}") #
+      ac= #
+      print(f"Before ={ac}") #
+      # #
       mb[f"{self.mosf[f]}{s}{c}"]=mbc[f"{f}{s}{c}"]
+      # #
+      a= #
+      print(f"After ={a}") #
+      a= #
+      print(f"Before ={a}") #
+      ac= #
+      print(f"Before ={ac}") #
+      # #
       mb[f"{self.mosf[f]}{s}"]=mbc[f"{s}{c}"]
+      # #
+      a= #
+      print(f"After ={a}") #
+      a= #
+      print(f"Before ={a}") #
+      ac= #
+      print(f"Before ={ac}") #
+      # #
       mb[f"{self.mosf[f]}{s}{self.mosf[c]}"]=mbc[f"{self.mosf[f]}{s}{c}"]
+      # #
+      a= #
+      print(f"After ={a}") #
+      a= #
+      print(f"Before ={a}") #
+      ac= #
+      print(f"Before ={ac}") #
+      # #
       mb[f"{s}{self.mosf[c]}"]=mbc[f"{self.mosf[f]}{s}"]
+      # #
+      a= #
+      print(f"After ={a}") #
+      a= #
+      print(f"Before ={a}") #
+      ac= #
+      print(f"Before ={ac}") #
+      # #
       mb[f"{f}{s}{self.mosf[c]}"]=mbc[f"{self.mosf[f]}{s}{self.mosf[c]}"]
+      # #
+      a= #
+      print(f"After ={a}") #
+      a= #
+      print(f"Before ={a}") #
+      ac= #
+      print(f"Before ={ac}") #
+      # #
       mb[f"{f}{s}"]=mbc[f"{s}{self.mosf[c]}"]
+      # #
+      a= #
+      print(f"After ={a}") #
+      a= #
+      print(f"Before ={a}") #
+      ac= #
+      print(f"Before ={ac}") #
+      # #
     elif self.mosf[f]==c:
-      print(f"mb{f}{s}{c}={mb[f"{f}{s}{c}"]} and mbc{f}{s}{self.mosf[c]}={mbc[f"{f}{s}{self.mosf[c]}"]}") # #
-      print(f"mb[{f}{s}{c}]={mb[f"{f}{s}{c}"]} and mbc[{f}{s}{self.mosf[c]}]={mbc[f"{f}{s}{self.mosf[c]}"]}") # #
+      # #
+      a= #
+      print(f"Before ={a}") #
+      ac= #
+      print(f"Before ={ac}") #
+      # #
       mb[f"{self.mosf[f]}{s}{c}"]=mbc[f"{f}{s}{self.mosf[c]}"]
+      # #
+      a= #
+      print(f"After ={a}") #
+      a= #
+      print(f"Before ={a}") #
+      ac= #
+      print(f"Before ={ac}") #
+      # #
       mb[f"{self.mosf[f]}{s}"]=mbc[f"{f}{s}"]
+      # #
+      a= #
+      print(f"After ={a}") #
+      a= #
+      print(f"Before ={a}") #
+      ac= #
+      print(f"Before ={ac}") #
+      # #
       mb[f"{self.mosf[f]}{s}{self.mosf[c]}"]=mbc[f"{f}{s}{c}"]
+      # #
+      a= #
+      print(f"After ={a}") #
+      a= #
+      print(f"Before ={a}") #
+      ac= #
+      print(f"Before ={ac}") #
+      # #
       mb[f"{s}{self.mosf[c]}"]=mbc[f"{s}{c}"]
+      # #
+      a= #
+      print(f"After ={a}") #
+      a= #
+      print(f"Before ={a}") #
+      ac= #
+      print(f"Before ={ac}") #
+      # #
       mb[f"{[f]}{s}{self.mosf[c]}"]=mbc[f"{self.mosf[f]}{s}{c}"]
+      # #
+      a= #
+      print(f"After ={a}") #
+      a= #
+      print(f"Before ={a}") #
+      ac= #
+      print(f"Before ={ac}") #
+      # #
       mb[f"{f}{s}"]=mbc[f"{self.mosf[f]}{s}"]
+      # #
+      a= #
+      print(f"After ={a}") #
+      a= #
+      print(f"Before ={a}") #
+      ac= #
+      print(f"Before ={ac}") #
+      # #
       mb[f"{f}{s}{c}"]=mbc[f"{self.mosf[f]}{s}{self.mosf[c]}"]
+      # #
+      a= #
+      print(f"After ={a}") #
+      a= #
+      print(f"Before ={a}") #
+      ac= #
+      print(f"Before ={ac}") #
+      # #
       mb[f"{s}{c}"]=mbc[f"{s}{self.mosf[c]}"]
+      # #
+      a= #
+      print(f"After ={a}") #
+      a= #
+      print(f"Before ={a}") #
+      ac= #
+      print(f"Before ={ac}") #
+      # #
     print(f"After move the elements of moving block={mb}")
     for name in moving_block:
       mb_e=""
