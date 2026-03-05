@@ -89,10 +89,6 @@ class CubeSolver:
     f=moving_step.strip()[0]
     s=moving_step.strip()[1]
     c=moving_step.strip()[2]
-    # s1=f
-    # s2=self.mosf[f]
-    # s3=c
-    # s4=self.mosf[c]
     moving_block=[]
     mb={}
     moving_block.append(f"{f}{s}{c}")
@@ -103,9 +99,6 @@ class CubeSolver:
     moving_block.append(f"{s}{c}")
     moving_block.append(f"{self.mosf[f]}{s}")
     moving_block.append(f"{s}{self.mosf[c]}")
-    # if self.mosf[f]!=c:
-    # moving_block={}
-    # moving_block.append{f"{f}{s}{c}",f"{f}{s}{mosf[c]}",f"{mosf[f]}{s}{c}",f"{mosf[f]}{s}{mosf[c]}",f"{f}{s}",f"{s}{c}",f"{mosf[f]}{s}",f"{s}{mosf[c]}"}
     for name in moving_block:
       # print(f"={name}")
       st_e=""
@@ -135,7 +128,6 @@ class CubeSolver:
       mb[f"{f}{s}{self.mosf[c]}"]=mbc[f"{self.mosf[f]}{s}{self.mosf[c]}"]
       mb[f"{f}{s}"]=mbc[f"{s}{self.mosf[c]}"]
     elif self.mosf[f]==c:
-      # moving_block={f s c,f s mosf[c],mosf[f] s c, mosf[f] s mosf[c],f s, s c , mosf[f] s, s mosf[c]}
       mb[f"{self.mosf[f]}{s}{c}"]=mbc[f"{f}{s}{self.mosf[c]}"]
       mb[f"{self.mosf[f]}{s}"]=mbc[f"{f}{s}"]
       mb[f"{self.mosf[f]}{s}{self.mosf[c]}"]=mbc[f"{f}{s}{c}"]
@@ -145,17 +137,16 @@ class CubeSolver:
       mb[f"{f}{s}{c}"]=mbc[f"{self.mosf[f]}{s}{self.mosf[c]}"]
       mb[f"{s}{c}"]=mbc[f"{s}{self.mosf[c]}"]
     for state_element in state:
-      st_e=""
+      mb_e=""
       for name in moving_block:
         if sorted(name) == sorted(state_element):
                for se in range(len(state_element)):
                  for n in range(len(name)):
                    if state_element.strip()[se]==name.strip()[n]:
-                     # state[state_element].append(mb[name].strip()[n])
-                     st_e+=mb[name].strip()[n]
-      if st_e!="":
-        state.update({state_element:st_e})
-    print(f"state={state}")
+                     mb_e+=mb[name].strip()[n]
+      if mb_e!="":
+        state.update({state_element:mb_e})
+    print(f"Current state of puzzle after this {moving_step} movestate={state}")
     return state
   # def solver():
       # batch=27
