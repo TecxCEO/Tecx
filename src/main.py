@@ -105,7 +105,8 @@ class CubeSolver:
       for state_element in state:
         # print(f"={state_element}")
         if sorted(name) == sorted(state_element):
-          # print(f"={name}")
+          # print(f"Given element = {state_element},/n Moving block element = {name}")
+          print(f"Given State {state_element} element has value= {state[state_element]} /n Moving block {name} element has value = {moving_block[name]} ")
           for n in range(len(name)):
             # print(f"={n}")
             for se in range(len(state_element)):
@@ -140,20 +141,16 @@ class CubeSolver:
       mb_e=""
       for name in moving_block:
         if sorted(name) == sorted(state_element):
+          print(f"Given State {state_element} element has value= {state[state_element]} /n Moving block {name} element has value = {moving_block[name]} after this {moving_step} move")
                for se in range(len(state_element)):
                  for n in range(len(name)):
                    if state_element.strip()[se]==name.strip()[n]:
                      mb_e+=mb[name].strip()[n]
       if mb_e!="":
         state.update({state_element:mb_e})
-    print(f"Current state of puzzle after this {moving_step} movestate={state}")
+    print(f"Current state of puzzle after this {moving_step} move state={state}")
     return state
-  # def solver():
-      # batch=27
-      # block=20
-      # epoches=20
-      # for epoch in range(epoches):
-        
+    
   def moves(self, state, move_list=move_paths, move_history=""):
     moves_to=list(move_list)
     cur_state=state
