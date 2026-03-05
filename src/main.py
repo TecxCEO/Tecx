@@ -197,42 +197,42 @@ class CubeSolver:
       # #
     elif self.mosf[f]==c:
       # #
-      a= #
-      print(f"Before ={a}") #
-      ac= #
-      print(f"Before ={ac}") #
+      a= mb[f"{self.mosf[f]}{s}{c}"]#
+      print(f"Before  mb {self.mosf[f]}{s}{c}  ={a}") #
+      ac=mbc[f"{f}{s}{self.mosf[c]}"] #
+      print(f"Before  mbc {f}{s}{self.mosf[c]} ={ac}") #
       # #
       mb[f"{self.mosf[f]}{s}{c}"]=mbc[f"{f}{s}{self.mosf[c]}"]
       # #
-      a= #
-      print(f"After ={a}") #
-      a= #
-      print(f"Before ={a}") #
-      ac= #
-      print(f"Before ={ac}") #
+      a= mb[f"{self.mosf[f]}{s}{c}"]  #
+      print(f"After mb {self.mosf[f]}{s}{c}   ={a}") #
+      a= mb[f"{self.mosf[f]}{s}"]  #
+      print(f"Before mb {self.mosf[f]}{s}  ={a}") #
+      ac=mbc[f"{f}{s}"] #
+      print(f"Before  mbc {f}{s} ={ac}") #
       # #
       mb[f"{self.mosf[f]}{s}"]=mbc[f"{f}{s}"]
       # #
-      a= #
-      print(f"After ={a}") #
-      a= #
-      print(f"Before ={a}") #
-      ac= #
-      print(f"Before ={ac}") #
+      a= mb[f"{self.mosf[f]}{s}"]#
+      print(f"After  mb {self.mosf[f]}{s}  ={a}") #
+      a=mb[f"{self.mosf[f]}{s}{self.mosf[c]}"] #
+      print(f"Before mb {self.mosf[f]}{s}{self.mosf[c]}  ={a}") #
+      ac=mbc[f"{f}{s}{c}"] #
+      print(f"Before mbc {f}{s}{c}  ={ac}") #
       # #
       mb[f"{self.mosf[f]}{s}{self.mosf[c]}"]=mbc[f"{f}{s}{c}"]
       # #
-      a= #
-      print(f"After ={a}") #
-      a= #
-      print(f"Before ={a}") #
-      ac= #
-      print(f"Before ={ac}") #
+      a= mb[f"{self.mosf[f]}{s}{self.mosf[c]}"] #
+      print(f"After  mb {self.mosf[f]}{s}{self.mosf[c]} ={a}") #
+      a=mb[f"{s}{self.mosf[c]}"] #
+      print(f"Before mb {s}{self.mosf[c]}  ={a}") #
+      ac=mbc[f"{s}{c}"] #
+      print(f"Before mbc {s}{c} ={ac}") #
       # #
       mb[f"{s}{self.mosf[c]}"]=mbc[f"{s}{c}"]
       # #
-      a= #
-      print(f"After ={a}") #
+      a= mb[f"{s}{self.mosf[c]}"] #
+      print(f"After mb {s}{self.mosf[c]} ={a}") #
       a= #
       print(f"Before ={a}") #
       ac= #
@@ -269,10 +269,6 @@ class CubeSolver:
       # #
       a= #
       print(f"After ={a}") #
-      a= #
-      print(f"Before ={a}") #
-      ac= #
-      print(f"Before ={ac}") #
       # #
     print(f"After move the elements of moving block={mb}")
     for name in moving_block:
