@@ -85,17 +85,16 @@ class CubeSolver:
         moves[m]=move_paths[m]
     return moves
   def mover(self,moving_step,state):
+    # # state=state_gave
     f=moving_step.strip()[0]
     s=moving_step.strip()[1]
     c=moving_step.strip()[2]
-    s1=f
-    s2=self.mosf[f]
-    s3=c
-    s4=self.mosf[c]
-    # mosf[f] mosf[s]
+    # s1=f
+    # s2=self.mosf[f]
+    # s3=c
+    # s4=self.mosf[c]
     moving_block=[]
     mb={}
-    # moving_block.append(f"{f}{s}{c}",f"{f}{s}{self.mosf[c]}",f"{self.mosf[f]}{s}{c}",f"{self.mosf[f]}{s}{self.mosf[c]}",f"{f}{s}",f"{s}{c}",f"{self.mosf[f]}{s}",f"{s}{self.mosf[c]}")
     moving_block.append(f"{f}{s}{c}")
     moving_block.append(f"{f}{s}{self.mosf[c]}")
     moving_block.append(f"{self.mosf[f]}{s}{c}")
