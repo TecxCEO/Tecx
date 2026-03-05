@@ -233,42 +233,42 @@ class CubeSolver:
       # #
       a= mb[f"{s}{self.mosf[c]}"] #
       print(f"After mb {s}{self.mosf[c]} ={a}") #
-      a= #
-      print(f"Before ={a}") #
-      ac= #
-      print(f"Before ={ac}") #
+      a= mb[f"{[f]}{s}{self.mosf[c]}"]#
+      print(f"Before mb {[f]}{s}{self.mosf[c]}  ={a}") #
+      ac=mbc[f"{self.mosf[f]}{s}{c}"] #
+      print(f"Before  mbc {self.mosf[f]}{s}{c} ={ac}") #
       # #
       mb[f"{[f]}{s}{self.mosf[c]}"]=mbc[f"{self.mosf[f]}{s}{c}"]
       # #
-      a= #
-      print(f"After ={a}") #
-      a= #
-      print(f"Before ={a}") #
-      ac= #
-      print(f"Before ={ac}") #
+      a= mb[f"{[f]}{s}{self.mosf[c]}"] #
+      print(f"After  mb {[f]}{s}{self.mosf[c]}  ={a}") #
+      a= mb[f"{f}{s}"]#
+      print(f"Before mb {f}{s} ={a}") #
+      ac=mbc[f"{self.mosf[f]}{s}"] #
+      print(f"Before mbc {self.mosf[f]}{s}   ={ac}") #
       # #
       mb[f"{f}{s}"]=mbc[f"{self.mosf[f]}{s}"]
       # #
-      a= #
-      print(f"After ={a}") #
-      a= #
-      print(f"Before ={a}") #
-      ac= #
-      print(f"Before ={ac}") #
+      a=mb[f"{f}{s}"] #
+      print(f"After mb {f}{s} ={a}") #
+      a= mb[f"{f}{s}{c}"] #
+      print(f"Before mb {f}{s}{c}={a}") #
+      ac=mbc[f"{self.mosf[f]}{s}{self.mosf[c]}"] #
+      print(f"Before  mbc {self.mosf[f]}{s}{self.mosf[c]}  ={ac}") #
       # #
       mb[f"{f}{s}{c}"]=mbc[f"{self.mosf[f]}{s}{self.mosf[c]}"]
       # #
-      a= #
-      print(f"After ={a}") #
-      a= #
-      print(f"Before ={a}") #
-      ac= #
-      print(f"Before ={ac}") #
+      a= mb[f"{f}{s}{c}"] #
+      print(f"After mb {f}{s}{c}   ={a}") #
+      a=mb[f"{s}{c}"] #
+      print(f"Before mb {s}{c}   ={a}") #
+      ac= mbc[f"{s}{self.mosf[c]}"]#
+      print(f"Before mbc {s}{self.mosf[c]}   ={ac}") #
       # #
       mb[f"{s}{c}"]=mbc[f"{s}{self.mosf[c]}"]
       # #
-      a= #
-      print(f"After ={a}") #
+      a= mb[f"{s}{c}"] #
+      print(f"After  mb {s}{c} ={a}") #
       # #
     print(f"After move the elements of moving block={mb}")
     for name in moving_block:
