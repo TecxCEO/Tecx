@@ -99,13 +99,14 @@ class CubeSolver:
     moving_block.append(f"{s}{c}")
     moving_block.append(f"{self.mosf[f]}{s}")
     moving_block.append(f"{s}{self.mosf[c]}")
+    print(f"State Elements = {state}")
+    print(f"Moving Blocks = {moving_block}")
     for name in moving_block:
-      # print(f"={name}")
+      print(f"Moving Block = {name}")
       st_e=""
       for state_element in state:
-        # print(f"={state_element}")
+        print(f"State Element = {state_element}")
         if sorted(name) == sorted(state_element):
-          # print(f"Given element = {state_element},/n Moving block element = {name}")
           print(f"Given State {state_element} element has value= {state[state_element]} /n This valule will be saved to Moving block {name} element after this {moving_step} move ")
           for n in range(len(name)):
             # print(f"={n}")
