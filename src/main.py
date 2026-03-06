@@ -91,26 +91,26 @@ class CubeSolver:
     print(f"f={f}")
     s=moving_step.strip()[1]
     print(f"s={s}")
-    c=moving_step.strip()[2]
-    print(f"c={c}")
+    cc=moving_step.strip()[2]
+    print(f"cc={cc}")
     if f!= self.mosf[c]and f!=c:
-      cc=moving_step.strip()[2]
+      c=moving_step.strip()[2]
     elif f == self.mosf[c]and f!=c:
       for mosf in self.mosf:
         if mosf != f and mosf != s and mosf != self.mosf[f] and mosf != self.mosf[s]:
-          cc=mosf
+          c=mosf
           break
-    print(f"cc={cc}")
+    print(f"c={c}")
     moving_block=[]
     mb={}
-    moving_block.append(f"{f}{s}{cc}")
-    moving_block.append(f"{f}{s}{self.mosf[cc]}")
-    moving_block.append(f"{self.mosf[f]}{s}{cc}")
-    moving_block.append(f"{self.mosf[f]}{s}{self.mosf[cc]}")
+    moving_block.append(f"{f}{s}{c}")
+    moving_block.append(f"{f}{s}{self.mosf[c]}")
+    moving_block.append(f"{self.mosf[f]}{s}{c}")
+    moving_block.append(f"{self.mosf[f]}{s}{self.mosf[c]}")
     moving_block.append(f"{f}{s}")
-    moving_block.append(f"{s}{cc}")
+    moving_block.append(f"{s}{c}")
     moving_block.append(f"{self.mosf[f]}{s}")
-    moving_block.append(f"{s}{self.mosf[cc]}")
+    moving_block.append(f"{s}{self.mosf[c]}")
     print(f"State Elements = {state}")
     print(f"Moving Blocks = {moving_block}")
     for name in moving_block:
@@ -132,7 +132,7 @@ class CubeSolver:
         mb.update({name:st_e})
     print(f"Elements of moving block={mb}")
     mbc=mb
-    if self.mosf[f]!=c:
+    if self.mosf[f]!=cc:
       # #
       a=mb[f"{f}{s}{c}"] #
       print(f"Before mb{f}{s}{c}={a}") # #
@@ -207,7 +207,7 @@ class CubeSolver:
       a=mb[f"{f}{s}"] #
       print(f"After mb {f}{s}   ={a}") #
       # #
-    elif self.mosf[f]==c:
+    elif self.mosf[f]==cc:
       # #
       a= mb[f"{self.mosf[f]}{s}{c}"]#
       print(f"Before  mb {self.mosf[f]}{s}{c}  ={a}") #
