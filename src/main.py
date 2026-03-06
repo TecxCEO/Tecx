@@ -86,9 +86,13 @@ class CubeSolver:
     return moves
   def mover(self,moving_step,state):
     # # state=state_gave
+    print(f"move={moving_step}")
     f=moving_step.strip()[0]
+    print(f"f={f}")
     s=moving_step.strip()[1]
+    print(f"s={s}")
     c=moving_step.strip()[2]
+    print(f"c={c}")
     moving_block=[]
     mb={}
     moving_block.append(f"{f}{s}{c}")
