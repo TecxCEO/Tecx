@@ -245,7 +245,7 @@ class CubeSolver:
       # #
       a= mb[f"{s}{self.mosf[c]}"] #
       print(f"After mb {s}{self.mosf[c]} ={a}") #
-      a= mb[f"{[f]}{s}{self.mosf[c]}"]#
+      a= mb[f"{f}{s}{self.mosf[c]}"]#
       print(f"Before mb {[f]}{s}{self.mosf[c]}  ={a}") #
       ac=mbc[f"{self.mosf[f]}{s}{c}"] #
       print(f"Before  mbc {self.mosf[f]}{s}{c} ={ac}") #
