@@ -93,9 +93,9 @@ class CubeSolver:
     print(f"s={s}")
     cc=moving_step.strip()[2]
     print(f"cc={cc}")
-    if f!= self.mosf[c]and f!=c:
+    if f!= self.mosf[cc]and f!=cc:
       c=moving_step.strip()[2]
-    elif f == self.mosf[c]and f!=c:
+    elif f == self.mosf[cc]and f!=cc:
       for mosf in self.mosf:
         if mosf != f and mosf != s and mosf != self.mosf[f] and mosf != self.mosf[s]:
           c=mosf
