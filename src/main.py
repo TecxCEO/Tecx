@@ -310,21 +310,15 @@ class CubeSolver:
     move_path_history=list(move_history)
     while cur_state!=self.solution and i<len(moves_to):
       if(move_path_history!=""):
-        #####last_move=move_path_history[1:]
-        print(f"move_path_history[1:]={move_path_history[1:]}")
-        #len(move_path_history)
+        last_move=move_path_history[-1]
+        print(f"Last Move = {move_path_history[-1]}")
         while True:
-        #for to_move in moves_to:
           if last_move.strip()[:2]!=moves_to[i].strip()[:2]:
-            #if last_move.strip()[:2]!=to_move.strip()[:2]:
             print(f"last_move strip [:] = {last_move.strip()[:]}")
             print(f"last_move strip [:2] = {last_move.strip()[:2]}")
-            #print(f"to_move strip [:2] = {to_move.strip()[:]}")
-            #print(f"to_move strip [:2] = {to_move.strip()[:2]}")
-            # next_moves_list.append(to_move)
             break
           elif last_move.strip()[:2]==move_paths.strip()[:2]:
-            ##i+=1
+            i+=1
             print(f"i = i")
       states[i] = self.mover(moves_to[i],cur_state)
       move_path_history.append(moves_to[i])
