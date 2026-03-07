@@ -319,8 +319,8 @@ class CubeSolver:
             #if last_move.strip()[:2]!=to_move.strip()[:2]:
             print(f"last_move strip [:] = {last_move.strip()[:]}")
             print(f"last_move strip [:2] = {last_move.strip()[:2]}")
-            print(f"to_move strip [:2] = {to_move.strip()[:]}")
-            print(f"to_move strip [:2] = {to_move.strip()[:2]}")
+            #print(f"to_move strip [:2] = {to_move.strip()[:]}")
+            #print(f"to_move strip [:2] = {to_move.strip()[:2]}")
             # next_moves_list.append(to_move)
             break
           elif last_move.strip()[:2]==move_paths.strip()[:2]:
