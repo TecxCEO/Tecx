@@ -8,7 +8,6 @@ class CubeSolver:
     mutually_oppsite_side_faces={'blue':'green','orange':'red','yellow':'white'}
     self.mosf={'b':'g','g':'b','o':'r','r':'o','y':'w','w':'y'}
     colors={'blue','green','orange','red','yellow','white'}
-    # move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
     self.move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
     vertex={
       "rgy":["red","green","yellow"],
@@ -79,14 +78,13 @@ class CubeSolver:
       "gw":"ob",
       "gy":"gr"
     }
-  def next_moves(last_move):
-    moves={}
-    for m in range(18):
-      if(last_move.strip()[:2]!=move_paths[m].strip()[:2]):
-        moves[m]=move_paths[m]
-    return moves
+  #def next_moves(last_move):
+   # moves={}
+    #for m in range(18):
+     # if(last_move.strip()[:2]!=move_paths[m].strip()[:2]):
+      #  moves[m]=move_paths[m]
+    #return moves
   def mover(self,moving_step,state):
-    # # state=state_gave
     print(f"move={moving_step}")
     f=moving_step.strip()[0]
     print(f"f={f}")
@@ -118,16 +116,11 @@ class CubeSolver:
       print(f"Moving Block = {name}")
       st_e=""
       for state_element in state:
-        ##print(f"State Element = {state_element}")
         if sorted(name) == sorted(state_element):
           print(f"Given State {state_element} element has value= {state[state_element]} /n This valule will be saved to Moving block {name} element after this {moving_step} move ")
           for n in range(len(name)):
-            # print(f"={n}")
             for se in range(len(state_element)):
-              # print(f"={se}")
               if state_element.strip()[se]==name.strip()[n]:
-                # print(f"={state_element.strip()[se]}")
-                # print(f"se={se}")
                 st_e+=state[state_element].strip()[se]
       if st_e!="":
         mb.update({name:st_e})
@@ -337,8 +330,8 @@ class CubeSolver:
       with open(self.output_file, 'a', encoding='utf-8') as f:
             f.write(json.dumps(data_entry) + '\n')
       print(f"Successfully Saved")
-      last_move=moves_to[i]
-      next_moves_list=[]
+      # last_move=moves_to[i]
+      # next_moves_list=[]
       # next_moves_list=next_moves(last_move)
       ##for to_move in moves_to:
         ##if last_move.strip()[:2]!=to_move.strip()[:2]:
