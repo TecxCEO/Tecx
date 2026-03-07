@@ -297,8 +297,10 @@ class CubeSolver:
     print(f"Current state of puzzle after this {moving_step} move state={state}")
     return state
     
-  def moves(self, state, move_list=move_paths, move_history=""):
-    moves_to=list(move_list)
+  ##def moves(self, state, move_history="", move_list=move_paths ):
+  def moves(self, state, move_history="" ):
+    # moves_to=list(move_list)
+    moves_to=list(move_paths)
     cur_state=state
     i=0
     states = {}
@@ -306,6 +308,22 @@ class CubeSolver:
     last_move=""
     move_path_history=list(move_history)
     while cur_state!=self.solution and i<len(moves_to):
+      if(move_path_history!=""):
+        #####last_move=move_path_history[1:]
+        print(f"move_path_history[1:]={move_path_history[1:]}")
+        #len(move_path_history)
+        while True:
+        #for to_move in moves_to:
+          if last_move.strip()[:2]!=moves_to[i].strip()[:2]:
+            break
+            #if last_move.strip()[:2]!=to_move.strip()[:2]:
+            print(f"last_move strip [:] = {last_move.strip()[:]}")
+            print(f"last_move strip [:2] = {last_move.strip()[:2]}")
+            print(f"to_move strip [:2] = {to_move.strip()[:]}")
+            print(f"to_move strip [:2] = {to_move.strip()[:2]}")
+            # next_moves_list.append(to_move)
+          elif last_move.strip()[:2]==move_paths.strip()[:2]:
+            ##i+=1
       states[i] = self.mover(moves_to[i],cur_state)
       move_path_history.append(moves_to[i])
       # Prepare the JSONL entry
@@ -326,13 +344,13 @@ class CubeSolver:
       last_move=moves_to[i]
       next_moves_list=[]
       # next_moves_list=next_moves(last_move)
-      for to_move in moves_to:
-        if last_move.strip()[:2]!=to_move.strip()[:2]:
-          print(f"last_move strip [:] = {last_move.strip()[:]}")
-          print(f"last_move strip [:2] = {last_move.strip()[:2]}")
-          print(f"to_move strip [:2] = {to_move.strip()[:]}")
-          print(f"to_move strip [:2] = {to_move.strip()[:2]}")
-          next_moves_list.append(to_move)
+      ##for to_move in moves_to:
+        ##if last_move.strip()[:2]!=to_move.strip()[:2]:
+          ##print(f"last_move strip [:] = {last_move.strip()[:]}")
+          ##print(f"last_move strip [:2] = {last_move.strip()[:2]}")
+          ##print(f"to_move strip [:2] = {to_move.strip()[:]}")
+          ##print(f"to_move strip [:2] = {to_move.strip()[:2]}")
+          ##next_moves_list.append(to_move)
         # states[i], move_path_history, puzzle_solve = self.moves(states[i], next_moves_list, move_path_history)
       if states[i]==self.solution:
         puzzle_solve=True
