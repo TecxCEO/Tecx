@@ -357,7 +357,8 @@ class CubeSolver:
       if states[i]==self.solution:
         puzzle_solve=True
         return states[i], move_path_history, puzzle_solve
-      return self.moves(states[i], next_moves_list, move_path_history) ##
+      return self.moves(states[i], move_path_history) ##
+      ## return self.moves(states[i], next_moves_list, move_path_history) ##
       i=i+1
 if __name__=="__main__":
   state_given={
