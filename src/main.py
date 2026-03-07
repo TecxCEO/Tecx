@@ -315,15 +315,16 @@ class CubeSolver:
         while True:
         #for to_move in moves_to:
           if last_move.strip()[:2]!=moves_to[i].strip()[:2]:
-            break
             #if last_move.strip()[:2]!=to_move.strip()[:2]:
             print(f"last_move strip [:] = {last_move.strip()[:]}")
             print(f"last_move strip [:2] = {last_move.strip()[:2]}")
             print(f"to_move strip [:2] = {to_move.strip()[:]}")
             print(f"to_move strip [:2] = {to_move.strip()[:2]}")
             # next_moves_list.append(to_move)
+            break
           elif last_move.strip()[:2]==move_paths.strip()[:2]:
             ##i+=1
+            print(f"i = i")
       states[i] = self.mover(moves_to[i],cur_state)
       move_path_history.append(moves_to[i])
       # Prepare the JSONL entry
