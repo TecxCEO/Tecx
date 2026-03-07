@@ -329,7 +329,7 @@ class CubeSolver:
       for to_move in moves_to:
         if last_move.strip()[:2]!=to_move.strip()[:2]:
           print(f"last_move strip [:2] = {last_move.strip()[:2]}")
-          print(f"to_move strip [:2] = [to_move.strip()[:2]}")
+          print(f"to_move strip [:2] = {[to_move.strip()[:2]}")
           next_moves_list.append(to_move)
         # states[i], move_path_history, puzzle_solve = self.moves(states[i], next_moves_list, move_path_history)
       if states[i]==self.solution:
