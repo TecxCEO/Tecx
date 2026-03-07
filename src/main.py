@@ -349,6 +349,8 @@ class CubeSolver:
           ##next_moves_list.append(to_move)
         # states[i], move_path_history, puzzle_solve = self.moves(states[i], next_moves_list, move_path_history)
       if states[i]==self.solution:
+        print(f"This fuzzle have been solved.")
+        print(f"This fuzzle have been solved. ###################################################################################################################################################################################")
         puzzle_solve=True
         return states[i], move_path_history, puzzle_solve
       return self.moves(states[i], move_path_history) ##
