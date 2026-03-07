@@ -1,14 +1,15 @@
 import json
 
 class CubeSolver:
-  move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
+  # move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
   def __init__(self):
     self.output_file="./puzzle_move_and_states.json"
     faces={'b':'blue','g':'green','o':'orange','r':'red','y':'yellow','w':'white'}
     mutually_oppsite_side_faces={'blue':'green','orange':'red','yellow':'white'}
     self.mosf={'b':'g','g':'b','o':'r','r':'o','y':'w','w':'y'}
     colors={'blue','green','orange','red','yellow','white'}
-    # self.move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
+    # move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
+    self.move_paths={"rgy","rgw","rgo","rby","rbw","rbo","grw","gry","grb","gow","goy","gob","yrg","yrb","yrw","yog","yob","yow"}
     vertex={
       "rgy":["red","green","yellow"],
       "rgw":["red","green","white"],
@@ -300,7 +301,7 @@ class CubeSolver:
   ##def moves(self, state, move_history="", move_list=move_paths ):
   def moves(self, state, move_history="" ):
     # moves_to=list(move_list)
-    moves_to=list(move_paths)
+    moves_to=list(self.move_paths)
     cur_state=state
     i=0
     states = {}
