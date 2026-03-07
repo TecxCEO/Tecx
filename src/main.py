@@ -309,8 +309,8 @@ class CubeSolver:
     last_move=""
     move_path_history=list(move_history)
     while cur_state!=self.solution and i<len(moves_to):
-      if move_path_history!="":
-        last_move=move_path_history[-1] if move_path_history[-1] else None
+      if move_path_history!="" and move_path_history:
+        last_move=move_path_history[-1] if move_path_history else None
         print(f"Last Move = {move_path_history[-1]}")
         while True:
           if last_move.strip()[:2]!=moves_to[i].strip()[:2]:
